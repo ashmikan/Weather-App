@@ -31,7 +31,7 @@ const WeatherBackground = ({ condition }) => {
         const asset = gifs[weatherType];
 
         if(!asset) return gifs.default;
-        if (typeof async === 'object') 
+        if (typeof asset === 'object') 
             return condition.isDay ? asset.day : asset.night;
         return asset;
     }
