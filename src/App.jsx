@@ -23,7 +23,8 @@ const App = () => {
 
       <div className='flex items-center justify-center p-6 min-h-screen'>
         <div className='bg-transparent backdrop-filter backdrop-blur-md rounded-xl shadow-2xl rounded-xl p-8 max-w-md text-white w-full border-white/30 relative z-10'>
-          <h1 className='text-4xl font-extrabold text-center mb-6'>Weather App</h1>
+          <h1 className='text-4xl font-extrabold text-center mb-6'>SkyLumin ⛅</h1>
+          <h1 className='text-xl font-semibold text-center mb-6'><i>Know your weather,<br/>Own your day!</i></h1>
 
           {weather ? (
             <form onSubmit={handleSearch} className='flex flex-col relative'>
@@ -46,7 +47,7 @@ const App = () => {
           ) : (
             <div className='mt-6 text-center transition-opacity duration-500'>
               <button onClick={() => {setWeather(null); setCity('')}} 
-              className='mb-4 bg-pink-800 hover:bg-purple-700 text-white font-semibold py-1 px-3 rounded transition-colors'>New Search</button>
+              className='mb-4 bg-green-500 hover:bg-purple-700 text-white font-semibold py-1 px-3 rounded transition-colors'>New Search</button>
             </div>
           )} 
         </div>
