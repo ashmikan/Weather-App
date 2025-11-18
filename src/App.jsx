@@ -18,7 +18,7 @@ const App = () => {
   //http://api.openweathermap.org/geo/1.0/direct?q={query}&limit=5&appid={API key}
 
   useEffect(() => {
-    if(city.trim().length > 3 && !weather) {
+    if(city.trim().length >= 3 && !weather) {
       const trimer = setTimeout(() => fetchSuggestions(city), 500);
       return () => clearTimeout(trimer);
     }
@@ -35,8 +35,8 @@ const App = () => {
     }
     catch {
       setSuggestions([]);
+    }
   }
-}
 
   //This will fetch weather data from url
   const fetchWeatherData = async (url,name = '') => {
@@ -63,7 +63,7 @@ const App = () => {
     await fetchWeatherData(
       `https://api.openweathermap.org/data/2.5/weather?q=${city.trim()}&appid=${API_KEY}&units=metric`
     )
-    
+  }
 
   const getWeatherCondition = () => weather && ({
     main: weather.weather[0].main,
@@ -91,12 +91,12 @@ const App = () => {
                       `${s.name}, ${s.country}${s.state ? `, ${s.state}` : ''}`
                   
                      )} className=' block hover:bg-blue-700 bg-transparent px-4 py-2 text-sm text-left w-full'>
-                      {s.name}, {s.country}{s.state && `, ${s.state}`}
+                      {s.name}, {s.country}{s.state ? `, ${s.state}` : ''}
                     </button>
                   ))}
                 </div>
               )}
-              <button type='submit' className='bg-purple-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded transition-colors'>Get Weather</button>
+              <button type='submit' className='bg-green-500 hover:bg-purple-600 text-white font-semibold py-2 px-4 rounded transition-colors'>Get Weather</button>
             </form>
           ) : (
             <div className='mt-6 text-center transition-opacity duration-500'>
@@ -111,7 +111,7 @@ const App = () => {
                 </button>
               </div>
 
-              <img src={`https://api.openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`} alt={weather.weather[0].description}
+              <img src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`} alt={weather.weather[0].description}
                 className='mx-auto my-4 animate-bounce'/>
                 <p className='text-4xl'>
                   {convertTemperature(weather.main.temp, unit)}&deg;{unit}
@@ -169,7 +169,6 @@ const App = () => {
       </div>
     </div>
   )
-}
 }
 
 export default App
