@@ -78,10 +78,11 @@ const App = () => {
       <div className='flex items-center justify-center p-6 min-h-screen'>
         <div className='bg-transparent backdrop-filter backdrop-blur-md rounded-xl shadow-2xl rounded-xl p-8 max-w-md text-white w-full border-white/30 relative z-10'>
           <h1 className='text-4xl font-extrabold text-center mb-6'>SkyLumin ⛅</h1>
-          <h1 className='text-xl font-semibold text-center mb-6'><i>Know your weather,<br/>Own your day!</i></h1>
+          
 
           {!weather ? (
             <form onSubmit={handleSearch} className='flex flex-col relative'>
+              <h1 className='text-xl font-semibold text-center mb-6'><i>Know your weather,<br/>Own your day!</i></h1>
               <input value={city} onChange={(e) => setCity(e.target.value)} placeholder='Enter city or Country (min 3 letters)' className='mb-4 p-3 rounded border border-white bg-transparent text-white placeholder-white focus:outline-no focus:border-blue-300 transition duration-300'/>
               {suggestions.length > 0 && (
                 <div className='absolute top-full left-0 right-0 bg-transparent shadow-md rounded z-10'>
