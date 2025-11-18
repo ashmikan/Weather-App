@@ -1,6 +1,7 @@
 import React from 'react'
 import WeatherBackground from './components/WeatherBackground'
-import { convertTemperature } from './components/Helper'
+import { convertTemperature, getHumidityValue, getWindDirection, getVisibilityValue } from './components/Helper'
+import { HumidityIcon, WindIcon, VisibilityIcon, SunriseIcon, SunsetIcon } from './components/Icons'
 import { useEffect } from 'react'
 
 const App = () => {
@@ -124,7 +125,7 @@ const App = () => {
                       (${getHumidityValue(weather.main.humidity)})`],
 
                     [WindIcon, 'Wind', `${weather.wind.speed} m/s ${weather.wind.deg ? 
-                      `(${getWingDirection(weather.main.humidity)})` : ''}`
+                      `(${getWindDirection(weather.wind.deg)})` : ''}`
                     ],
 
                     [VisibilityIcon, 'Visibility', getVisibilityValue(weather.visibility)
