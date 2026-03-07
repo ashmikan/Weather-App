@@ -77,3 +77,5 @@ If you'd like, I can:
 - Add a quick demo GIF in `public/` and embed it in this README.
 
 Tell me which one you'd like me to do next.
+
+Thank you for checking out SkyLumin — enjoy exploring the skies! If you want me to implement either suggestion above, reply with your choice and I'll make the change.
