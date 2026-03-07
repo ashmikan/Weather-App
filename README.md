@@ -7,7 +7,8 @@
 [![Vite](https://img.shields.io/badge/Vite-DevServer-brightgreen)](https://vitejs.dev/)
 [![React](https://img.shields.io/badge/React-17%2B-blue)](https://reactjs.org/)
 
-SkyLumin is a small weather application that queries OpenWeatherMap to show current conditions with animated backgrounds and helpful weather metrics.</div>
+SkyLumin is a small weather application that queries OpenWeatherMap to show current conditions with animated backgrounds and helpful weather metrics.</br>
+⛅️⛈🌦</div>
 
 ---
 
@@ -86,14 +87,12 @@ npm run preview
 
 ---
 
-<<<<<<< HEAD
-If you'd like, I can:
+<h3 align="center">Thank you for checking out SkyLumin - Enjoy exploring the skies! ⛅</h3>
 
-- Add a `.env.example` and update `src/App.jsx` to read the API key from `import.meta.env`.
-- Add a quick demo GIF in `public/` and embed it in this README.
+---
 
-Tell me which one you'd like me to do next.
+<div align="center">
+👩🏼‍💻 Credit: <a href="https://github.com/ashmikan">Ashmika Nathali </a>
+Last Edited on: 07/03/2026
+</div>
 
-Thank you for checking out SkyLumin — enjoy exploring the skies!
-=======
->>>>>>> 68f58d221c4e4b1a2f3f63d8ce6a74b52685aaf8
